@@ -3,7 +3,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native';
 
 import styles from './styles';
 
-const OnboardingScene = () => {
+const OnboardingScene = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.containerHeader}>
@@ -21,6 +21,7 @@ const OnboardingScene = () => {
                 <TouchableOpacity
                     activeOpacity={0.8}
                     style={styles.containerButton}
+                    onPress={() => navigation.push('InputPhoneNumber')}
                 >
                     <Text style={styles.textButton}>
                         Start Messaging

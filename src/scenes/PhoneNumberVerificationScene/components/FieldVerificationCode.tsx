@@ -1,13 +1,16 @@
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
 import { Text, View } from 'react-native';
 
 import styles from '../styles';
+import { StackActions, useNavigation } from '@react-navigation/native';
 
 export interface IRefFieldVerificationCode {
     setValue: (value: string) => void;
 };
 
 const FieldVerificationCode = forwardRef(({}, ref) => {
+    const navigation = useNavigation();
+
     const [verificationCode, setVerificationCode] = useState('');
 
     useImperativeHandle(ref, () => ({
@@ -15,6 +18,10 @@ const FieldVerificationCode = forwardRef(({}, ref) => {
             setVerificationCode(prevVerificationCode => {
                 if (value === 'del') {
                     return prevVerificationCode?.slice(0, -1);
+                }
+
+                if (prevVerificationCode.length === 4) {
+                    return prevVerificationCode;
                 }
                 
                 if (!prevVerificationCode) {
@@ -25,6 +32,14 @@ const FieldVerificationCode = forwardRef(({}, ref) => {
             });    
         }
     }));
+
+    useEffect(function handleVerificationCode() {
+        if (verificationCode.length < 4) {
+            return;
+        }
+
+        navigation.dispatch(StackActions.push('Profile'));
+    }, [verificationCode]);
     
     return (
         <View style={styles.containerCode}>

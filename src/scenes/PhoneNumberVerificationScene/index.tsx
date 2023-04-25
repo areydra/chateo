@@ -5,11 +5,7 @@ import Keyboard from '../../components/Keyboard';
 import styles from './styles';
 import FieldVerificationCode, { IRefFieldVerificationCode } from './components/FieldVerificationCode';
 
-interface IPhoneNumberVerificationScene {
-    phoneNumber: string;
-};
-
-const PhoneNumberVerificationScene = ({ phoneNumber='+62 838-0710-6451' }: IPhoneNumberVerificationScene) => {
+const PhoneNumberVerificationScene = ({ route }) => {
     const refFieldVerificationCode = useRef<IRefFieldVerificationCode>();
 
     const onPressKeyboard = (value: string) => {
@@ -23,7 +19,7 @@ const PhoneNumberVerificationScene = ({ phoneNumber='+62 838-0710-6451' }: IPhon
                 <Text style={styles.description}>
                     <Text>We have sent you an SMS with the code</Text>
                     {"\n"}
-                    <Text> to {phoneNumber}</Text>
+                    <Text> to {route.params?.phoneNumber}</Text>
                 </Text>
                 <FieldVerificationCode ref={refFieldVerificationCode}/>
             </View>

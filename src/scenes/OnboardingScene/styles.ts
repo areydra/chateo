@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         alignItems: 'center',
         justifyContent: 'space-between',
+        backgroundColor: '#FFFFFF',
     },
     containerHeader: {
         alignItems: 'center',
