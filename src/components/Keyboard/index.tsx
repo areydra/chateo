@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Image, TouchableOpacity, View } from 'react-native';
 
 import styles from './styles';
+import Text from '../Text';
 
 interface IKeyboard {
     onPress: (value: string) => void;
@@ -17,7 +18,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('1')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>1</Text>
+                    <Text
+                        text='1'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -25,7 +30,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('2')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>2</Text>
+                    <Text
+                        text='2'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -33,7 +42,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('3')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>3</Text>
+                    <Text
+                        text='3'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
             </View>
             <View style={styles.containerLineKeyboard}>
@@ -43,7 +56,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('4')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>4</Text>
+                    <Text
+                        text='4'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -51,7 +68,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('5')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>5</Text>
+                    <Text
+                        text='5'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -59,7 +80,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('6')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>6</Text>
+                    <Text
+                        text='6'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
             </View>
             <View style={styles.containerLineKeyboard}>
@@ -69,7 +94,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('7')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>7</Text>
+                    <Text
+                        text='7'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -77,7 +106,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('8')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>8</Text>
+                    <Text
+                        text='8'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -85,12 +118,20 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('9')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>9</Text>
+                    <Text
+                        text='9'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
             </View>
             <View style={styles.containerLineKeyboard}>
                 <TouchableOpacity style={styles.containerTextKeyboard}>
-                    <Text style={styles.textKeyboard}></Text>
+                    <Text
+                        text=''
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}
@@ -98,7 +139,11 @@ const Keyboard = ({ onPress } : IKeyboard) => {
                         onPress('0')
                     }}
                 >
-                    <Text style={styles.textKeyboard}>0</Text>
+                    <Text
+                        text='0'
+                        typography='heading_2'
+                        style={styles.textKeyboard}
+                    />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.containerTextKeyboard}

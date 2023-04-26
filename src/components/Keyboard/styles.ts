@@ -15,9 +15,6 @@ const styles = StyleSheet.create({
         height: 54,
     },
     textKeyboard: {
-        fontFamily: 'Mulish-Bold',
-        fontSize: 24,
-        lineHeight: 30,
         color: '#0F1828',
         textAlign: 'center',
     },

@@ -7,9 +7,6 @@ const styles = StyleSheet.create({
         borderRadius: 30,
     },
     textButton: {
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 16,
-        lineHeight: 28,
         color: '#F7F7FC',
         textAlign: 'center',
     },

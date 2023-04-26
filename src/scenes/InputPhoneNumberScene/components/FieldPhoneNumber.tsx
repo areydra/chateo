@@ -1,7 +1,8 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { Image, Text, TextInput, View } from 'react-native';
+import { Image, TextInput, View } from 'react-native';
 
 import styles from '../styles';
+import Text from '../../../components/Text';
 
 export interface IRefFieldPhoneNumber {
     setValue: (value: string) => void;
@@ -33,7 +34,11 @@ const FieldPhoneNumber = forwardRef(({}, ref) => {
                     source={require('../../../../assets/images/flags/indonesia.png')}
                     style={styles.image}
                 />
-                <Text style={styles.textCountryCode}>+62</Text>
+                <Text
+                    text='+62'
+                    typography='body_text_1'
+                    style={styles.textCountryCode}
+                />
             </View>
             <TextInput
                 style={styles.field}

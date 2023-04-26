@@ -1,8 +1,9 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import { Image, View } from 'react-native';
 
 import styles from './styles';
 import Button from '../../components/Button';
+import Text from '../../components/Text';
 
 const OnboardingScene = ({ navigation }) => {
     return (
@@ -12,13 +13,19 @@ const OnboardingScene = ({ navigation }) => {
                     source={require('../../../assets/images/illustrations/onboarding.png')}
                     style={styles.image}
                 />
-                <Text style={styles.textTitle}>
-                    Connect easily with your family and friends over countries
-                </Text>
+                <Text
+                    text='Connect easily with your family and friends over countries'
+                    typography='heading_2'
+                    style={styles.textTitle}
+                />                    
             </View>
 
             <View style={styles.containerBottom}>
-                <Text style={styles.textPrivacyPolicy}>Terms & Privacy Policy</Text>
+                <Text
+                    text='Terms & Privacy Policy'
+                    typography='body_text_1'
+                    style={styles.textPrivacyPolicy}
+                />      
                 <Button
                     onPress={() => navigation.push('InputPhoneNumber')}
                     text='Start Messaging'

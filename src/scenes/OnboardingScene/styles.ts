@@ -18,9 +18,6 @@ const styles = StyleSheet.create({
         marginTop: 45,
     },
     textTitle: {
-        fontFamily: 'Mulish-Bold',
-        fontSize: 24,
-        lineHeight: 30,
         color: '#0F1828',
         textAlign: 'center',
         marginTop: 42,
@@ -30,9 +27,6 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
     },
     textPrivacyPolicy: {
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 14,
-        lineHeight: 24,
         color: '#0F1828',
         textAlign: 'center',
         marginBottom: 18,

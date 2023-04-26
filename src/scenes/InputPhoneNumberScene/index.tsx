@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import Keyboard from '../../components/Keyboard';
 
 import styles from './styles';
 import FieldPhoneNumber, { IRefFieldPhoneNumber } from './components/FieldPhoneNumber';
 import Button from '../../components/Button';
+import Text from '../../components/Text';
 
 const InputPhoneNumberScene = ({ navigation }) => {
     const refFieldPhoneNumber = useRef<IRefFieldPhoneNumber>();
@@ -17,8 +18,16 @@ const InputPhoneNumberScene = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.containerHeader}>
-                <Text style={styles.title}>Enter Your Phone Number</Text>
-                <Text style={styles.description}>Please confirm your country code and enter your phone number</Text>
+                <Text
+                    text='Enter Your Phone Number'
+                    typography='heading_2'
+                    style={styles.title}
+                />
+                <Text
+                    text='Please confirm your country code and enter your phone number'
+                    typography='body_text_2'
+                    style={styles.description}
+                />
                 <FieldPhoneNumber ref={refFieldPhoneNumber}/>
             </View>
             <Button

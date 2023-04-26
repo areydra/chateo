@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 import styles from './styles';
+import Text from '../Text';
 
 interface IButton {
     onPress: (args: any) => any;
@@ -16,9 +17,11 @@ const Button = ({ onPress, text, style }: IButton) => {
             style={[styles.button, style]}
             onPress={onPress}
         >
-            <Text style={styles.textButton}>
-                {text}
-            </Text>
+            <Text
+                text={text}
+                typography='subheading_2'
+                style={styles.textButton}
+            />
         </TouchableOpacity>
     );
 };

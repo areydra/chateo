@@ -1,8 +1,9 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import styles from '../styles';
 import { StackActions, useNavigation } from '@react-navigation/native';
+import Text from '../../../components/Text';
 
 export interface IRefFieldVerificationCode {
     setValue: (value: string) => void;
@@ -45,7 +46,11 @@ const FieldVerificationCode = forwardRef(({}, ref) => {
         <View style={styles.containerCode}>
             <View style={styles.containerTextCodeCircle}>
                 {verificationCode[0] ? (
-                    <Text style={styles.textCode}>{verificationCode[0]}</Text>
+                    <Text
+                        text={verificationCode[0]}
+                        typography='heading_1'
+                        style={styles.textCode}
+                    />
                 ) : (
                     <View style={styles.circle}/>
                 )}
@@ -53,8 +58,11 @@ const FieldVerificationCode = forwardRef(({}, ref) => {
             <View style={styles.space}/>
             <View style={styles.containerTextCodeCircle}>
                 {verificationCode[1] ? (
-                    <Text style={styles.textCode}>{verificationCode[1]}</Text>
-
+                    <Text
+                        text={verificationCode[1]}
+                        typography='heading_1'
+                        style={styles.textCode}
+                    />
                 ) : (
                     <View style={styles.circle}/>
                 )}
@@ -62,8 +70,11 @@ const FieldVerificationCode = forwardRef(({}, ref) => {
             <View style={styles.space}/>
             <View style={styles.containerTextCodeCircle}>
                 {verificationCode[2] ? (
-                    <Text style={styles.textCode}>{verificationCode[2]}</Text>
-
+                    <Text
+                        text={verificationCode[2]}
+                        typography='heading_1'
+                        style={styles.textCode}
+                    />
                 ) : (
                     <View style={styles.circle}/>
                 )}
@@ -71,8 +82,11 @@ const FieldVerificationCode = forwardRef(({}, ref) => {
             <View style={styles.space}/>
             <View style={styles.containerTextCodeCircle}>
                 {verificationCode[3] ? (
-                    <Text style={styles.textCode}>{verificationCode[3]}</Text>
-
+                    <Text
+                        text={verificationCode[3]}
+                        typography='heading_1'
+                        style={styles.textCode}
+                    />
                 ) : (
                     <View style={styles.circle}/>
                 )}

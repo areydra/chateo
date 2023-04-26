@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import Keyboard from '../../components/Keyboard';
 
 import styles from './styles';
 import FieldVerificationCode, { IRefFieldVerificationCode } from './components/FieldVerificationCode';
+import Text from '../../components/Text';
 
 const PhoneNumberVerificationScene = ({ route }) => {
     const refFieldVerificationCode = useRef<IRefFieldVerificationCode>();
@@ -15,16 +16,24 @@ const PhoneNumberVerificationScene = ({ route }) => {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={styles.title}>Enter Code</Text>
-                <Text style={styles.description}>
-                    <Text>We have sent you an SMS with the code</Text>
-                    {"\n"}
-                    <Text> to {route.params?.phoneNumber}</Text>
-                </Text>
+                <Text
+                    text='Enter Code'
+                    typography='heading_2'
+                    style={styles.title}
+                />
+                <Text
+                    text={`We have sent you an SMS with the code ${"\n"} to ${route.params?.phoneNumber}`}
+                    typography='body_text_2'
+                    style={styles.description}
+                />
                 <FieldVerificationCode ref={refFieldVerificationCode}/>
             </View>
             <View>
-                <Text style={styles.textResendCode}>Resend Code</Text>
+                <Text
+                    text='Resend Code'
+                    typography='subheading_2'
+                    style={styles.textResendCode}
+                />
                 <Keyboard onPress={onPressKeyboard}/>
             </View>
         </View>

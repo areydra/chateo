@@ -11,17 +11,11 @@ const styles = StyleSheet.create({
         paddingTop: 80,
     },
     title: {
-        fontFamily: 'Mulish-Bold',
-        fontSize: 24,
-        lineHeight: 30,
         color: '#0F1828',
         textAlign: 'center',
         marginBottom: 8,
     },
     description: {
-        fontFamily: 'Mulish-Regular',
-        fontSize: 14,
-        lineHeight: 24,
         color: '#0F1828',
         textAlign: 'center',
     },
@@ -57,8 +51,6 @@ const styles = StyleSheet.create({
         marginRight: 8,
     },
     textCountryCode: {
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 14,
         lineHeight: 16,
     },
     button: {
