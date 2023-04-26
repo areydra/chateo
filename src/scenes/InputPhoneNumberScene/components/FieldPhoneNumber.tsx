@@ -1,8 +1,9 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { Image, TextInput, View } from 'react-native';
+import { Image, View } from 'react-native';
 
 import styles from '../styles';
 import Text from '../../../components/Text';
+import TextInput from '../../../components/TextInput';
 
 export interface IRefFieldPhoneNumber {
     setValue: (value: string) => void;

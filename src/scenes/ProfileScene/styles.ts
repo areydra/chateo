@@ -20,12 +20,8 @@ const styles = StyleSheet.create({
     },
     field: {
         width: '100%',
-        backgroundColor: colors.neutral.offWhite,
         borderRadius: 4,
         marginBottom: 12,
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 14,
-        color: colors.neutral.active,
         height: 36,
     },
     button: {

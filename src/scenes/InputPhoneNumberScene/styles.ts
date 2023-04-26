@@ -36,11 +36,8 @@ const styles = StyleSheet.create({
         height: 36,
     },
     field: {
-        backgroundColor: colors.neutral.offWhite,
         paddingHorizontal: 6,
         paddingVertical: 8,
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 14,
         borderRadius: 4,
         height: 36,
         flex: 1,

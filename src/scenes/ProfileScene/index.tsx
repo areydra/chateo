@@ -1,8 +1,9 @@
 import React from 'react';
-import { Image, TextInput, View } from 'react-native';
+import { Image, View } from 'react-native';
 
 import styles from './styles';
 import Button from '../../components/Button';
+import TextInput from '../../components/TextInput';
 
 const ProfileScene = () => {
     return (
