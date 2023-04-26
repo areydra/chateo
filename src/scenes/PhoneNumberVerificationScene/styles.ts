@@ -1,23 +1,24 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'space-between',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: colors.neutral.white,
     },
     title: {
         textAlign: 'center',
-        color: '#0F1828',
+        color: colors.neutral.active,
         marginTop: 80,
     },
     description: {
         textAlign: 'center',
-        color: '#0F1828',
+        color: colors.neutral.active,
         marginTop: 8,
     },
     textResendCode: {
-        color: '#002DE3',
+        color: colors.brand.default,
         textAlign: 'center',
         marginBottom: 44,
     },
@@ -36,10 +37,10 @@ const styles = StyleSheet.create({
         width: 24,
         height: 24,
         borderRadius: 24,
-        backgroundColor: '#EDEDED',
+        backgroundColor: colors.neutral.line,
     },
     textCode: {
-        color: '#0F1828',
+        color: colors.neutral.active,
     },
     space: {
         height: 1,

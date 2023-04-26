@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: colors.neutral.white,
     },
     containerHeader: {
         flex: 1,
@@ -11,12 +12,12 @@ const styles = StyleSheet.create({
         paddingTop: 80,
     },
     title: {
-        color: '#0F1828',
+        color: colors.neutral.active,
         textAlign: 'center',
         marginBottom: 8,
     },
     description: {
-        color: '#0F1828',
+        color: colors.neutral.active,
         textAlign: 'center',
     },
     containerField: {
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     },
     containerCountryCode: {
         marginRight: 16,
-        backgroundColor: '#F7F7FC',
+        backgroundColor: colors.neutral.offWhite,
         paddingHorizontal: 6,
         paddingVertical: 8,
         flexDirection: 'row',
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
         height: 36,
     },
     field: {
-        backgroundColor: '#F7F7FC',
+        backgroundColor: colors.neutral.offWhite,
         paddingHorizontal: 6,
         paddingVertical: 8,
         fontFamily: 'Mulish-SemiBold',

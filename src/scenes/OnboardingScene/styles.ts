@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -6,7 +7,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: colors.neutral.white,
     },
     containerHeader: {
         alignItems: 'center',
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
         marginTop: 45,
     },
     textTitle: {
-        color: '#0F1828',
+        color: colors.neutral.active,
         textAlign: 'center',
         marginTop: 42,
     },
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
     },
     textPrivacyPolicy: {
-        color: '#0F1828',
+        color: colors.neutral.active,
         textAlign: 'center',
         marginBottom: 18,
     },

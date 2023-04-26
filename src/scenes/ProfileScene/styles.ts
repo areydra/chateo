@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: colors.neutral.white,
     },
     containerHeader: {
         flex: 1,
@@ -19,12 +20,12 @@ const styles = StyleSheet.create({
     },
     field: {
         width: '100%',
-        backgroundColor: '#F7F7FC',
+        backgroundColor: colors.neutral.offWhite,
         borderRadius: 4,
         marginBottom: 12,
         fontFamily: 'Mulish-SemiBold',
         fontSize: 14,
-        color: '#0F1828',
+        color: colors.neutral.active,
         height: 36,
     },
     button: {

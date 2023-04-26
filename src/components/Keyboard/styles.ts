@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
     containerKeyboard: {
         paddingBottom: 24,
-        backgroundColor: '#F7F7FC',
+        backgroundColor: colors.neutral.offWhite,
     },
     containerLineKeyboard: {
         flexDirection: 'row',
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
         height: 54,
     },
     textKeyboard: {
-        color: '#0F1828',
+        color: colors.neutral.active,
         textAlign: 'center',
     },
     image: {

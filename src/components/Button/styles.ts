@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#002DE3',
+        backgroundColor: colors.brand.default,
         paddingVertical: 12,
         borderRadius: 30,
     },
     textButton: {
-        color: '#F7F7FC',
+        color: colors.neutral.offWhite,
         textAlign: 'center',
     },
 });
