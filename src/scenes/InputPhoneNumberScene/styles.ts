@@ -62,18 +62,8 @@ const styles = StyleSheet.create({
         lineHeight: 16,
     },
     button: {
-        backgroundColor: '#002DE3',
-        paddingVertical: 12,
-        borderRadius: 30,
         marginBottom: 32,
         marginHorizontal: 24,
-    },
-    textButton: {
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 16,
-        lineHeight: 28,
-        color: '#F7F7FC',
-        textAlign: 'center',
     },
 });
 

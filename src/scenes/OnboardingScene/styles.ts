@@ -37,18 +37,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 18,
     },
-    containerButton: {
-        backgroundColor: '#002DE3',
-        paddingVertical: 12,
-        borderRadius: 30,
-    },
-    textButton: {
-        textAlign: 'center',
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 16,
-        lineHeight: 28,
-        color: '#F7F7FC',
-    },
 });
 
 export default styles;

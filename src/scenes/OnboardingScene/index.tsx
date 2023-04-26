@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 import styles from './styles';
+import Button from '../../components/Button';
 
 const OnboardingScene = ({ navigation }) => {
     return (
@@ -18,15 +19,10 @@ const OnboardingScene = ({ navigation }) => {
 
             <View style={styles.containerBottom}>
                 <Text style={styles.textPrivacyPolicy}>Terms & Privacy Policy</Text>
-                <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={styles.containerButton}
+                <Button
                     onPress={() => navigation.push('InputPhoneNumber')}
-                >
-                    <Text style={styles.textButton}>
-                        Start Messaging
-                    </Text>
-                </TouchableOpacity>
+                    text='Start Messaging'
+                />
             </View>
         </View>
     );

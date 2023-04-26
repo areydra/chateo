@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, TextInput, View } from 'react-native';
 
 import styles from './styles';
+import Button from '../../components/Button';
 
 const ProfileScene = () => {
     return (
@@ -20,14 +21,13 @@ const ProfileScene = () => {
                     placeholder='Last Name (Optional)'
                 />
             </View>
-            <TouchableOpacity
-                activeOpacity={0.8}
+            <Button
+                onPress={() => {}}
+                text='Save'
                 style={styles.button}
-            >
-                <Text style={styles.textButton}>Save</Text>
-            </TouchableOpacity>
+            />
         </View>
-    )
+    );
 };
 
 export default ProfileScene;

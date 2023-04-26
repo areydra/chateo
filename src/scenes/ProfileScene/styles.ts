@@ -3,14 +3,12 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 24,
-        alignItems: 'center',
         backgroundColor: '#FFFFFF',
     },
     containerHeader: {
         flex: 1,
-        width: '100%',
         alignItems: 'center',
+        paddingHorizontal: 24,
     },
     image: {
         width: 100,
@@ -30,19 +28,8 @@ const styles = StyleSheet.create({
         height: 36,
     },
     button: {
-        width: '100%',
-        backgroundColor: '#002DE3',
-        paddingVertical: 12,
-        borderRadius: 30,
         marginBottom: 32,
         marginHorizontal: 24,
-    },
-    textButton: {
-        fontFamily: 'Mulish-SemiBold',
-        fontSize: 16,
-        lineHeight: 28,
-        color: '#F7F7FC',
-        textAlign: 'center',
     },
 });
 

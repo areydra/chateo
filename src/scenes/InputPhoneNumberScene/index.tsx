@@ -1,10 +1,11 @@
-import React, { useRef, useState } from 'react';
-import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useRef } from 'react';
+import { Text, View } from 'react-native';
 
 import Keyboard from '../../components/Keyboard';
 
 import styles from './styles';
 import FieldPhoneNumber, { IRefFieldPhoneNumber } from './components/FieldPhoneNumber';
+import Button from '../../components/Button';
 
 const InputPhoneNumberScene = ({ navigation }) => {
     const refFieldPhoneNumber = useRef<IRefFieldPhoneNumber>();
@@ -20,16 +21,15 @@ const InputPhoneNumberScene = ({ navigation }) => {
                 <Text style={styles.description}>Please confirm your country code and enter your phone number</Text>
                 <FieldPhoneNumber ref={refFieldPhoneNumber}/>
             </View>
-            <TouchableOpacity
-                style={styles.button}
+            <Button
                 onPress={() => {
                     navigation.push('PhoneNumberVerification', {
                         phoneNumber: '+62 838-0710-6451',
                     });
                 }}
-            >
-                <Text style={styles.textButton}>Continue</Text>
-            </TouchableOpacity>
+                text='Continue'
+                style={styles.button}
+            />
             <Keyboard onPress={onPressKeyboard} />
         </View>
     );
