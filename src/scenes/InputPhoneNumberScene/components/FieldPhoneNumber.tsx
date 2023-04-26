@@ -7,10 +7,11 @@ import TextInput from '../../../components/TextInput';
 
 export interface IRefFieldPhoneNumber {
     setValue: (value: string) => void;
+    phoneNumber: string;
 };
 
 const FieldPhoneNumber = forwardRef(({}, ref) => {
-    const [phoneNumber, setPhoneNumber] = useState<string>();
+    const [phoneNumber, setPhoneNumber] = useState<string>('');
 
     useImperativeHandle(ref, () => ({
         setValue: (value: string) => {
@@ -25,7 +26,8 @@ const FieldPhoneNumber = forwardRef(({}, ref) => {
 
                 return prevPhoneNumber + value;
             });    
-        }
+        },
+        phoneNumber,
     }));
 
     return (

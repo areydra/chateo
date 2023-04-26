@@ -5,8 +5,11 @@ import Keyboard from '../../components/Keyboard';
 import styles from './styles';
 import FieldVerificationCode, { IRefFieldVerificationCode } from './components/FieldVerificationCode';
 import Text from '../../components/Text';
+import { useUsertore } from '../../stores/useUserStore';
 
-const PhoneNumberVerificationScene = ({ route }) => {
+const PhoneNumberVerificationScene = () => {
+    const phoneNumber = useUsertore(state => state.user.phoneNumber);
+
     const refFieldVerificationCode = useRef<IRefFieldVerificationCode>();
 
     const onPressKeyboard = (value: string) => {
@@ -22,7 +25,7 @@ const PhoneNumberVerificationScene = ({ route }) => {
                     style={styles.title}
                 />
                 <Text
-                    text={`We have sent you an SMS with the code ${"\n"} to ${route.params?.phoneNumber}`}
+                    text={`We have sent you an SMS with the code ${"\n"} to ${phoneNumber}`}
                     typography='body_text_2'
                     style={styles.description}
                 />
