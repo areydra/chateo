@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { Image, TouchableOpacity, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import Text from '../../components/Text';
@@ -16,6 +16,7 @@ interface ICardUser {
     isOnline: boolean;
     isHasUnreadStory: boolean;
     onPress: () => void;
+    avatar: string,
 };
 
 const CardUser = ({
@@ -26,6 +27,7 @@ const CardUser = ({
     totalUnreadMessage,
     isOnline,
     isHasUnreadStory,
+    avatar,
     onPress,
 }: ICardUser) => (
     <TouchableOpacity
@@ -39,14 +41,22 @@ const CardUser = ({
             start={{x: 0, y: 0}}
             end={{x: 1, y: 0}} 
         >
-            <View style={styles.defaultImage}>
-                <Text
-                    text={initialName}
-                    typography='heading_2'
-                    style={styles.textDefaultImage}
-                    color={colors.neutral.white}
+            {avatar ? (
+                <Image
+                    style={styles.avatar}
+                    source={{ uri: avatar }}
                 />
-            </View>
+            ) : (
+                <View style={styles.defaultImage}>
+                    <Text
+                        text={initialName}
+                        typography='heading_2'
+                        style={styles.textDefaultImage}
+                        color={colors.neutral.white}
+                    />
+                </View>
+
+            )}
             {isOnline && (
                 <View style={styles.online}/>
             )}

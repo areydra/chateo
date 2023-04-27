@@ -15,6 +15,7 @@ const DUMMY_CONTACTS = [
         status: 'Last seen yesterday',
         isOnline: false,
         isHasUnreadStory: false,
+        avatar: undefined,
     },
     {
         id: 2,
@@ -23,6 +24,7 @@ const DUMMY_CONTACTS = [
         status: 'Online',
         isOnline: true,
         isHasUnreadStory: true,
+        avatar: 'https://cdn.myanimelist.net/images/characters/4/495795.jpg',
     }
 ];
 
@@ -51,6 +53,7 @@ const ContactScene = () => {
                             initialName={item.initialName}
                             isOnline={item.isOnline}
                             isHasUnreadStory={item.isHasUnreadStory}
+                            avatar={item.avatar}
                             onPress={() => {}}
                         />                            
                     )}

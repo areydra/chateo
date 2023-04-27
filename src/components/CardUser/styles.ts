@@ -57,6 +57,14 @@ const styles = StyleSheet.create({
         top: 0,
         right: 0,
     },
+    avatar: {
+        width: 52,
+        height: 52,
+        borderWidth: 2,
+        borderRadius: 16,
+        borderColor: colors.neutral.white,
+        resizeMode: 'contain',
+    },
 });
 
 export default styles;
