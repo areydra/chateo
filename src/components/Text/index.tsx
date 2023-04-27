@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text as NativeText, StyleProp, TextStyle } from 'react-native';
+import { Text as NativeText, StyleProp, TextProps, TextStyle } from 'react-native';
 
 import styles from './styles';
 
@@ -21,9 +21,12 @@ const mode = {
     metadata_3: styles.metadata3,
 };
 
-const Text = ({ text, style, typography }: IText) => {
+const Text = ({ text, style, typography, ...props }: IText & TextProps) => {
     return (
-        <NativeText style={[styles.default, mode[typography], style]}>
+        <NativeText
+            style={[styles.default, mode[typography], style]}
+            {...props}
+        >
             {text}
         </NativeText>
     );

@@ -6,6 +6,7 @@ import styles from './styles';
 import FieldVerificationCode, { IRefFieldVerificationCode } from './components/FieldVerificationCode';
 import Text from '../../components/Text';
 import { useUsertore } from '../../stores/useUserStore';
+import CountdownResend from './components/CountdownResend';
 
 const PhoneNumberVerificationScene = () => {
     const phoneNumber = useUsertore(state => state.user.phoneNumber);
@@ -32,11 +33,7 @@ const PhoneNumberVerificationScene = () => {
                 <FieldVerificationCode ref={refFieldVerificationCode}/>
             </View>
             <View>
-                <Text
-                    text='Resend Code'
-                    typography='subheading_2'
-                    style={styles.textResendCode}
-                />
+                <CountdownResend/>
                 <Keyboard onPress={onPressKeyboard}/>
             </View>
         </View>

@@ -46,7 +46,12 @@ const styles = StyleSheet.create({
         height: 1,
         width: 40,
         backgroundColor: 'transparent',
-    }
+    },
+    textCountdown: {
+        color: colors.neutral.active,
+        textAlign: 'center',
+        marginBottom: 44,
+    },
 });
 
 export default styles;
