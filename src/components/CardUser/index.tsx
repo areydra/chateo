@@ -16,7 +16,7 @@ interface ICardUser {
     isOnline: boolean;
     isHasUnreadStory: boolean;
     onPress: () => void;
-    avatar: string,
+    avatar?: string,
 };
 
 const CardUser = ({
@@ -72,14 +72,16 @@ const CardUser = ({
                 color={colors.neutral.disabled}
             />
         </View>
-        {time || totalUnreadMessage && (
-            <View style={styles.containerLatest}>
+        <View style={styles.containerLatest}>
+            {time && (
                 <Text
                     text={time}
                     typography='metadata_2'
                     color={colors.neutral.weak}
                     style={styles.textTime}
                 />
+            )}
+            {totalUnreadMessage && (
                 <View style={styles.totalUnreadMessages}>
                     <Text
                         text={totalUnreadMessage}
@@ -88,8 +90,8 @@ const CardUser = ({
                         style={styles.textTotalUnreadMessages}
                     />
                 </View>
-            </View>
-        )}
+            )}
+        </View>
     </TouchableOpacity>
 );
 
