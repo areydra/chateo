@@ -24,20 +24,37 @@ const InputPhoneNumberScene = ({ navigation }) => {
         return countryCode.concat(isFirstCharZero ? phoneNumber.slice(1) : phoneNumber);
     };
 
-    const onPressKeyboard = (value: string) => {
-        refFieldPhoneNumber.current?.setValue(value);
-    };
-
-    const onPressButtonContinue = () => {
-        let phoneNumber = getPhoneNumberWithCountryCode(refFieldPhoneNumber.current?.phoneNumber as string);
-
+    const phoneNumberValidation = (phoneNumber: string, callback: () => void) => {
         if (!phoneNumber.length) {
             ToastAndroid.show('Phone number cannot be blank!', ToastAndroid.SHORT);
             return;
         }
 
-        setPhoneNumber(phoneNumber);
-        navigation.push('PhoneNumberVerification');
+        if (phoneNumber.length < 9) {
+            ToastAndroid.show('Phone number too short!', ToastAndroid.SHORT);
+            return;
+        }
+
+        if (phoneNumber.length > 14) {
+            ToastAndroid.show('Phone number too long!', ToastAndroid.SHORT);
+            return;
+        }
+
+        callback();
+    };
+
+    const onPressKeyboard = (value: string) => {
+        refFieldPhoneNumber.current?.setValue(value);
+    };
+
+    const onPressButtonContinue = () => {
+        let phoneNumber = refFieldPhoneNumber.current?.phoneNumber as string;
+        let phoneNumberWithCountryCode = getPhoneNumberWithCountryCode(phoneNumber);
+
+        phoneNumberValidation(phoneNumber, () => {
+            setPhoneNumber(phoneNumberWithCountryCode);
+            navigation.push('PhoneNumberVerification');
+        });
     };
 
     return (
