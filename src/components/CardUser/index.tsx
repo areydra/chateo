@@ -1,11 +1,11 @@
 import React from 'react';
-import { Image, TouchableOpacity, View } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import { TouchableOpacity, View } from 'react-native';
 
 import Text from '../../components/Text';
 
 import styles from './styles';
 import colors from '../../themes/colors';
+import CardAvatar from '../CardAvatar';
 
 interface ICardUser {
     initialName?: string;
@@ -35,32 +35,13 @@ const CardUser = ({
         style={styles.container}
         onPress={onPress}
     >
-        <LinearGradient
+        <CardAvatar
+            avatar={avatar}
+            isHasUnreadStory={isHasUnreadStory}
+            initialName={initialName}
+            isOnline={isOnline}
             style={styles.containerFirst}
-            colors={isHasUnreadStory ? colors.gradient.styleOne : colors.gradient.white}
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}} 
-        >
-            {avatar ? (
-                <Image
-                    style={styles.avatar}
-                    source={{ uri: avatar }}
-                />
-            ) : (
-                <View style={styles.defaultImage}>
-                    <Text
-                        text={initialName}
-                        typography='heading_2'
-                        style={styles.textDefaultImage}
-                        color={colors.neutral.white}
-                    />
-                </View>
-
-            )}
-            {isOnline && (
-                <View style={styles.online}/>
-            )}
-        </LinearGradient>
+        />
         <View style={styles.containerMiddle}>
             <Text
                 text={title}

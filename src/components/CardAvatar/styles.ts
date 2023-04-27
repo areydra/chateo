@@ -5,29 +5,12 @@ const styles = StyleSheet.create({
     container: {
         maxWidth: 56,
     },
-    containerFirst: {
+    innerContainer: {
         width: 56,
         height: 56,
         alignItems: 'center',
         justifyContent: 'center',
-        marginRight: 12,
         borderRadius: 16,
-    },
-    containerMiddle: {
-        flex: 1,
-    },
-    containerLatest: {
-        alignItems: 'flex-end',
-    },
-    totalUnreadMessages: {
-        backgroundColor: colors.brand.background,
-        borderRadius: 50,
-        width: 24,
-        height: 24,
-        justifyContent: 'center',
-    },
-    textTotalUnreadMessages: {
-        textAlign: 'center',
     },
     defaultImage: {
         backgroundColor: colors.brand.light,
@@ -42,9 +25,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         lineHeight: 24,
         textAlign: 'center',
-    },
-    textTime: {
-        marginBottom: 10,
     },
     online: {
         backgroundColor: colors.accent.success,
@@ -64,6 +44,10 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         borderColor: colors.neutral.white,
         resizeMode: 'contain',
+    },
+    description: {
+        textAlign: 'center',
+        marginTop: 4,
     },
 });
 
