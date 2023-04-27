@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.neutral.white,
-        marginHorizontal: 24,
+        paddingHorizontal: 24,
     },
     navbar: {
         flexDirection: 'row',
