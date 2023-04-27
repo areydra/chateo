@@ -6,11 +6,17 @@ import OnboardingScene from './src/scenes/OnboardingScene';
 import InputPhoneNumberScene from './src/scenes/InputPhoneNumberScene';
 import PhoneNumberVerificationScene from './src/scenes/PhoneNumberVerificationScene';
 import ProfileScene from './src/scenes/ProfileScene';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, StatusBar, TouchableOpacity } from 'react-native';
+import colors from './src/themes/colors';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
+    React.useEffect(() => {
+        StatusBar.setBackgroundColor(colors.neutral.white);
+        StatusBar.setBarStyle('dark-content');
+    }, []);
+
     return (
         <NavigationContainer>
             <Stack.Navigator
