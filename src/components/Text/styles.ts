@@ -1,10 +1,6 @@
 import { StyleSheet } from 'react-native';
-import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
-    default: {
-        color: colors.neutral.active,
-    },
     heading1: {
         fontFamily: 'Mulish-Bold',
         fontSize: 32,

@@ -22,4 +22,8 @@ export default {
         success: '#2CC069',
         safe: '#7BCBCF',
     },
+    gradient: {
+        white: ['#FFFFFF', '#FFFFFF'],
+        styleOne: ['#D2D5F9', '#2C37E1'],
+    }
 };
