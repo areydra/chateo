@@ -5,7 +5,7 @@ import styles from './styles';
 import Button from '../../components/Button';
 import TextInput from '../../components/TextInput';
 
-const ProfileScene = () => {
+const ProfileScene = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.containerHeader}>
@@ -23,7 +23,14 @@ const ProfileScene = () => {
                 />
             </View>
             <Button
-                onPress={() => {}}
+                onPress={() => navigation.reset({
+                    index: 0,
+                    routes: [
+                        {
+                            name: 'Home',
+                        },
+                    ],
+                })}
                 text='Save'
                 style={styles.button}
             />
