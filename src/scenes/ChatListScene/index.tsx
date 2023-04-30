@@ -33,7 +33,7 @@ const DUMMY_CONTACTS = [
     }
 ];
 
-const ChatsScene = ({ navigation }) => {
+const ChatListScene = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
@@ -81,4 +81,4 @@ const ChatsScene = ({ navigation }) => {
     );
 };
 
-export default ChatsScene;
+export default ChatListScene;

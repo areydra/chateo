@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import ContactScene from '../../../scenes/ContactScene';
-import ChatsScene from '../../../scenes/ChatsScene';
+import ChatListScene from '../../../scenes/ChatListScene';
 import MoreScene from '../../../scenes/MoreScene';
 import TabBar from './components/TabBar';
 
@@ -15,7 +15,7 @@ const HomeTabs = () => {
         tabBar={props => <TabBar {...props}/>}
     >
       <Tab.Screen name='Contacts' component={ContactScene} />
-      <Tab.Screen name='Chats' component={ChatsScene} />
+      <Tab.Screen name='Chats' component={ChatListScene} />
       <Tab.Screen name='More' component={MoreScene} />
     </Tab.Navigator>
   );
