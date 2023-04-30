@@ -33,7 +33,7 @@ const DUMMY_CONTACTS = [
     }
 ];
 
-const ChatsScene = () => {
+const ChatsScene = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
@@ -67,7 +67,7 @@ const ChatsScene = () => {
                                 isOnline={item.isOnline}
                                 isHasUnreadStory={item.isHasUnreadStory}
                                 avatar={item.avatar}
-                                onPress={() => {}}
+                                onPress={() => navigation.push('Chat')}
                                 time={item.time}
                                 totalUnreadMessage={item.totalUnreadMessage}
                             />                            

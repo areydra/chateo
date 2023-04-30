@@ -8,6 +8,7 @@ import OnboardingScene from '../../../scenes/OnboardingScene';
 import InputPhoneNumberScene from '../../../scenes/InputPhoneNumberScene';
 import PhoneNumberVerificationScene from '../../../scenes/PhoneNumberVerificationScene';
 import ProfileScene from '../../../scenes/ProfileScene';
+import ChatScene from '../../../scenes/ChatScene';
 
 const Stack = createNativeStackNavigator();
 
@@ -62,6 +63,13 @@ const NavigationContainer = () => (
             <Stack.Screen
                 name='Home'
                 component={HomeTabs}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <Stack.Screen
+                name='Chat'
+                component={ChatScene}
                 options={{
                     headerShown: false,
                 }}
